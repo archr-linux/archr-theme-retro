@@ -1,0 +1,109 @@
+# Retro: 8-bit windows. Sweetie 16 palette (CC0, GrafxKid), Press Start 2P,
+# square corners, hard shadows, motion in steps and a blinking cursor.
+# Keys: docs/temas.md of the archr-launcher.
+name = "Retro"
+description = { en = "8-bit windows in the Sweetie 16 palette, with a blinking cursor and chiptune sounds.", pt_BR = "Janelas 8 bits na paleta Sweetie 16, com cursor piscando e sons chiptune.", es = "Ventanas de 8 bits con la paleta Sweetie 16, cursor parpadeante y sonidos chiptune.", ru = "8-битные окна в палитре Sweetie 16, мигающий курсор и чиптюн-звуки." }
+author = "ArchR"
+version = "1.0.0"
+license = "CC BY 4.0 (art, sounds); OFL 1.1 (fonts)"
+min_launcher = "0.1.0"
+
+background = "#1A1C2C"
+surface = "#29366F"
+surface_elevated = "#3B5DC9"
+border = "#F4F4F4"
+badge = "#29366F"
+text = "#F4F4F4"
+text_secondary = "#F4F4F4"
+muted = "#94B0C2"
+dim = "#566C86"
+accent = "#FFCD75"
+accent_text = "#1A1C2C"
+accent_text_secondary = "#333C57"
+success = "#38B764"
+warning = "#EF7D57"
+scrim = "#1A1C2CCC"
+
+font = "fonts/PressStart2P-Regular.ttf"
+font_semibold = "fonts/PressStart2P-Regular.ttf"
+font_mono = "fonts/PressStart2P-Regular.ttf"
+font_mono_medium = "fonts/PressStart2P-Regular.ttf"
+font_grid = 8
+font_smoothing = false
+
+corners = 0
+border_width = 2
+shadow = "hard"
+art_scaling = "pixel"
+easing = "steps"
+
+details_shot = { x = 0.03125, y = 0.141667, w = 0.375, h = 0.283333 }
+details_info = { x = 0.046875, y = 0.533333, w = 0.35, h = 0.316667 }
+details_title = { x = 0.4625, y = 0.2, w = 0.490625, h = 0.066667 }
+details_subtitle = { x = 0.4625, y = 0.275, w = 0.490625, h = 0.05 }
+details_text = { x = 0.4625, y = 0.333333, w = 0.490625, h = 0.4 }
+details_actions = { x = 0.4625, y = 0.766667, w = 0.490625, h = 0.075 }
+
+background_image = "images/background.png"
+
+[frames.list]
+image = "frames/window.png"
+slice = [4, 16, 18, 8]
+scale = 2
+pad = [10, 34, 12, 12]
+
+[frames.panel]
+image = "frames/window.png"
+slice = [4, 16, 18, 8]
+scale = 2
+pad = [10, 34, 12, 12]
+
+[frames.art]
+image = "frames/plain.png"
+slice = [4, 4, 8, 8]
+scale = 2
+pad = [6, 6, 8, 8]
+
+[frames.badge]
+image = "frames/badge.png"
+slice = 2
+scale = 2
+pad = 2
+
+[frames.tile]
+image = "frames/plain.png"
+slice = [4, 4, 8, 8]
+scale = 2
+
+[frames.tile_selected]
+image = "frames/tile_selected.png"
+slice = [4, 4, 8, 8]
+scale = 2
+
+[view.lista]
+name = { en = "List", pt_BR = "Lista", es = "Lista", ru = "Список" }
+
+[view.lista.systems]
+divider = false
+summary = false
+list = { x = 0.03125, y = 0.2, w = 0.6, h = 0.65, row = 0.066667, selected = 0.066667, gap = 0.0, font = 0.033333, selected_font = 0.033333, radius = 0, cursor = "▶" }
+panel = { x = 0.6875, y = 0.2, w = 0.284375, h = 0.65 }
+art = { x = 0.696875, y = 0.216667, w = 0.265625, h = 0.233333 }
+info = { x = 0.70625, y = 0.466667, w = 0.25, h = 0.366667, title = 0.033333, meta = 0.033333, valign = "top" }
+
+[view.lista.games]
+divider = false
+list = { x = 0.046875, y = 0.2, w = 0.565625, h = 0.65, row = 0.066667, selected = 0.066667, gap = 0.0, font = 0.033333, selected_font = 0.033333, radius = 0, cursor = "▶" }
+panel = { x = 0.68125, y = 0.2, w = 0.275, h = 0.5 }
+art = { x = 0.68125, y = 0.2, w = 0.275, h = 0.5, fit = "contain" }
+meta = { x = 0.68125, y = 0.75, w = 0.275, h = 0.05, size = 0.033333 }
+
+[view.vitrine]
+name = { en = "Showcase", pt_BR = "Vitrine", es = "Escaparate", ru = "Витрина" }
+
+[view.vitrine.systems]
+list = { radius = 0 }
+info = { title = 0.033333, meta = 0.033333 }
+
+[view.vitrine.games]
+list = { font = 0.033333, selected_font = 0.033333, cursor = "▶" }
