@@ -35,7 +35,8 @@ font_min = 12
 corners = 0
 border_width = 2
 shadow = "hard"
-art_scaling = "pixel"
+art_scaling = "smooth"
+image_scaling = "pixel"
 easing = "steps"
 
 # Details: left column 18-216 (picture, facts), right column 240-627.
